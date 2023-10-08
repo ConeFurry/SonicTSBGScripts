@@ -1,0 +1,22 @@
+local UIS = game:GetService("UserInputService")
+local SPAMKEY = Enum.KeyCode.T
+local InTextbox = false
+print("started")
+UIS.TextBoxFocused:Connect(function()
+	InTextbox = true
+end)
+
+UIS.TextBoxFocusReleased:Connect(function()
+	InTextbox = false
+end)
+
+UIS.InputBegan:Connect(function(key)
+	if key.KeyCode == SPAMKEY and InTextbox == false then
+	local SavedPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(333.162598, 671.104004, 442.538269, 0.935306609, -4.22157385e-08, 0.353838265, 2.51353125e-08, 1, 5.28674136e-08, -0.353838265, -4.0553406e-08, 0.935306609)
+wait(1.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = SavedPos
+--game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.X,-435,game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity.Z)
+end
+end)
