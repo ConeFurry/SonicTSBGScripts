@@ -1,13 +1,13 @@
 task.spawn(function()
-loadstring(game:HttpGet(''))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ConeFurry/SonicTSBGScripts/main/%5BR%5DEraseKeybind'))()
 end
 
 task.spawn(function()
-loadstring(game:HttpGet(''))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ConeFurry/SonicTSBGScripts/main/%5BT%5DMountainsKeybind'))()
 end
 
 task.spawn(function()
-loadstring(game:HttpGet(''))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ConeFurry/SonicTSBGScripts/main/%5BY%5DMissplaceKeybind'))()
 end
 
 local Panel = Instance.new("ScreenGui")
